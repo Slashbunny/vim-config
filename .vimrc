@@ -1,41 +1,53 @@
+" Load all bundles (~/.vim/bundles) using Pathogen
 filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" Do not run in Vi compatability mode
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
 
-set diffexpr=MyDiff()
-function MyDiff()
-    let opt = '-a --binary '
-    if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-    if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-    let arg1 = v:fname_in
-    if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-    let arg2 = v:fname_new
-    if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-    let arg3 = v:fname_out
-    if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-    let eq = ''
-    if $VIMRUNTIME =~ ' '
-        if &sh =~ '\<cmd'
-            let cmd = '""' . $VIMRUNTIME . '\diff"'
-            let eq = '"'
+" Only load Windows stuff if running from within Windows
+if has("win32")
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+
+    set diffexpr=MyDiff()
+    function MyDiff()
+        let opt = '-a --binary '
+        if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+        if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+        let arg1 = v:fname_in
+        if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+        let arg2 = v:fname_new
+        if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+        let arg3 = v:fname_out
+        if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+        let eq = ''
+        if $VIMRUNTIME =~ ' '
+            if &sh =~ '\<cmd'
+                let cmd = '""' . $VIMRUNTIME . '\diff"'
+                let eq = '"'
+            else
+                let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+            endif
         else
-            let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+            let cmd = $VIMRUNTIME . '\diff'
         endif
-    else
-        let cmd = $VIMRUNTIME . '\diff'
-    endif
-    silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
+        silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+    endfunction
+endif
 
 " Function to run PHP_CodeSniffer
 function! RunPhpcs()
     let l:filename=@%
-    let l:phpcs_output=system('c:\\gitrepos\\vendor_libs\\PEAR\\phpcs.bat --report=csv -n --standard=LoVullo '.l:filename)
+
+    if has("unix")
+        let l:phpcs_output=system('phpcs --report=csv --standard=Zend '.l:filename)
+    elseif has("win32")
+        let l:phpcs_output=system('c:\\gitrepos\\vendor_libs\\PEAR\\phpcs.bat --report=csv -n --standard=LoVullo '.l:filename)
+    endif
+
     let l:phpcs_list=split(l:phpcs_output, "\n")
     unlet l:phpcs_list[0]
     cexpr l:phpcs_list
@@ -58,7 +70,7 @@ set wildmenu
 set pastetoggle=<F11>
 set wmh=0
 
-" Tab Options
+" Tab/Space Options
 set expandtab
 set shiftwidth=4
 set showtabline=2
@@ -66,7 +78,7 @@ set softtabstop=4
 set tabpagemax=50
 set tabstop=4
 
-" Show Special Chars
+" Print Special Whitespace Characters
 set list
 set list listchars=tab:»·,trail:·
 
@@ -103,7 +115,7 @@ let php_alt_assignByReference=1
 " Omnicomplete for PHP
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-" Always use "sqlanywhere" syntax for sql files
+" Always use SQLAnywhere syntax for sql files
 let b:sql_type_override = "sqlanywhere"
 let g:sql_type_default  = "sqlanywhere"
 
@@ -120,15 +132,19 @@ autocmd BufWrite * :silent! :%s:\(\S\+\)\s\+$:\1:g
 autocmd BufWrite * :retab
 
 " Keyboard Shortcuts
-map <F9> :!start "c:\Program Files\Mozilla Firefox\firefox.exe" http://us2.php.net/\#function.<CR>
 nnoremap  <silent>  <space> :exe 'silent! normal! za'.(foldlevel('.')?'':'l')<CR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
 " Micro$soft Word Documents
-"autocmd BufReadPre *.doc set ro
-"autocmd BufReadPre *.doc set hlsearch!
-"autocmd BufReadPost *.doc %!C:\antiword\ANTIWORD.EXE "%"
+autocmd BufReadPre *.doc set ro
+autocmd BufReadPre *.doc set hlsearch!
+
+if has("unix")
+    autocmd BufReadPost *.doc %!antiword "%"
+elseif has("win32")
+    autocmd BufReadPost *.doc %!C:\antiword\ANTIWORD.EXE "%"
+endif
 
 " Taglist Plugin
 "let Tlist_Ctags_Cmd = 'c:\WINDOWS\ctags.exe'
@@ -143,17 +159,16 @@ inoremap <C-P> <ESC>:call PhpDoc()<CR>i
 nnoremap <C-P> :call PhpDoc()<CR>
 vnoremap <C-P> :call PhpDoc()<CR>
 
-" REGEX Notes
-"
-" Move Brackets to their own line
-" %s:\([^ ]\+\)\( \)*\([{}]\):\1\2\r\3:g
-" %s:\([{}]\)\( \)*\([^ ]\+\):\1\r\2\3:g
-"
-
 " delimitMate Options
 let delimitMate_expand_cr=1
 let delimitMate_expand_space=1
 let delimitMate_balance_matchpairs=1
 
-" Command-T Binding (Always set the root to gitrepos)
-nmap <silent> <Leader>t :CommandT C:\gitrepos\<CR>
+" Command-T Binding
+if has("unix")
+    nmap <silent> <Leader>t :CommandT<CR>
+elseif has("win32")
+    " Always set the root to projects directory when at work
+    nmap <silent> <Leader>t :CommandT C:\gitrepos\<CR>
+endif
+
