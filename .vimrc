@@ -235,3 +235,6 @@ elseif has("win32")
     nmap <silent> <Leader>t :CommandT C:\gitrepos\<CR>
 endif
 
+" SuperTab Options
+let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
+
