@@ -123,9 +123,16 @@ command! Phpcs execute RunPhpcs()<CR>:copen
 "let g:zenburn_high_Contrast = 1
 "colorscheme zenburn
 colorscheme molokai
+set t_Co=256
 syntax on
 set guioptions=aegimrLtb
-set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
+
+if ( has( "win32" ) )
+    set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
+else
+    set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
+endif
+
 set number
 set wildmenu
 set pastetoggle=<F11>
