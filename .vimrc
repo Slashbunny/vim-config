@@ -160,7 +160,7 @@ set nowritebackup
 
 " Spelling Options
 setlocal spell spelllang=en_us
-set spell
+set nospell
 
 " Fold Options
 set foldmethod=indent
@@ -245,5 +245,5 @@ endif
 let g:CommandTMaxFiles = 50000
 
 " SuperTab Options
-let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
+"let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
 
