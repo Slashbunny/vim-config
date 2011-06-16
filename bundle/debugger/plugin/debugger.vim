@@ -123,6 +123,8 @@ if filereadable($VIMRUNTIME."/plugin/debugger.py")
   pyfile $VIMRUNTIME/plugin/debugger.py
 elseif filereadable($HOME."/.vim/plugin/debugger.py")
   pyfile $HOME/.vim/plugin/debugger.py
+elseif filereadable($HOME."/.vim/bundle/debugger/plugin/debugger.py")
+  pyfile $HOME/.vim/bundle/debugger/plugin/debugger.py
 elseif filereadable($HOME."/vimfiles/bundle/debugger/plugin/debugger.py")
   pyfile $HOME/vimfiles/bundle/debugger/plugin/debugger.py
 else
