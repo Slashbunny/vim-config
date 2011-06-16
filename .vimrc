@@ -122,13 +122,15 @@ command! Phpcs execute RunPhpcs()<CR>:copen
 " General Options
 "let g:zenburn_high_Contrast = 1
 "colorscheme zenburn
-colorscheme molokai
+"colorscheme molokai
+colorscheme desert
 set t_Co=256
 syntax on
 set guioptions=aegimrLtb
 
 if ( has( "win32" ) )
-    set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
+    "set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
+    set guifont=Droid_Sans_Mono_Slashed:h8:cANSI
 else
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
 endif
@@ -230,9 +232,9 @@ nnoremap <C-P> :call PhpDoc()<CR>
 vnoremap <C-P> :call PhpDoc()<CR>
 
 " delimitMate Options
-let delimitMate_expand_cr=1
-let delimitMate_expand_space=1
-let delimitMate_balance_matchpairs=1
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+let delimitMate_balance_matchpairs = 1
 
 " Command-T Binding
 if has("unix")
@@ -243,7 +245,4 @@ elseif has("win32")
 endif
 
 let g:CommandTMaxFiles = 50000
-
-" SuperTab Options
-"let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
 
