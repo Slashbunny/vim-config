@@ -1,33 +1,30 @@
 [submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+    path = bundle/fugitive
+    url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/markdown"]
-	path = bundle/markdown
-	url = git://github.com/tpope/vim-markdown.git
+    path = bundle/markdown
+    url = git://github.com/tpope/vim-markdown.git
 [submodule "bundle/vividchalk"]
-	path = bundle/vividchalk
-	url = git://github.com/tpope/vim-vividchalk.git
+    path = bundle/vividchalk
+    url = git://github.com/tpope/vim-vividchalk.git
 [submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
+    path = bundle/delimitMate
+    url = git://github.com/Raimondi/delimitMate.git
 [submodule "bundle/align"]
-	path = bundle/align
-	url = git://github.com/tsaleh/vim-align.git
+    path = bundle/align
+    url = git://github.com/tsaleh/vim-align.git
 [submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://github.com/wincent/Command-T.git
+    path = bundle/command-t
+    url = git://github.com/wincent/Command-T.git
 [submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+    path = bundle/snipmate
+    url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = git://github.com/ervandew/supertab.git
+    path = bundle/supertab
+    url = git://github.com/ervandew/supertab.git
 [submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = git://github.com/bronson/vim-bufexplorer.git
+    path = bundle/bufexplorer
+    url = git://github.com/bronson/vim-bufexplorer.git
 [submodule "bundle/colorsamplerpack"]
-	path = bundle/colorsamplerpack
-	url = git://github.com/Slashbunny/vim-colorsamplerpack.git
-[submodule "bundle/ack.vim"]
-	path = bundle/ack.vim
-	url = git://github.com/mileszs/ack.vim.git
+    path = bundle/colorsamplerpack
+    url = git://github.com/Slashbunny/vim-colorsamplerpack.git

@@ -246,4 +246,3 @@ endif
 
 let g:CommandTMaxFiles = 50000
 
-nnoremap <leader>a :Ack
