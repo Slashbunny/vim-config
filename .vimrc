@@ -246,3 +246,5 @@ endif
 
 let g:CommandTMaxFiles = 50000
 
+" Show column markers at 80 and 120 columns
+set colorcolumn=80,120
