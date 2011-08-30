@@ -22,9 +22,6 @@
 [submodule "bundle/supertab"]
     path = bundle/supertab
     url = git://github.com/ervandew/supertab.git
-[submodule "bundle/bufexplorer"]
-    path = bundle/bufexplorer
-    url = git://github.com/bronson/vim-bufexplorer.git
 [submodule "bundle/colorsamplerpack"]
     path = bundle/colorsamplerpack
     url = git://github.com/Slashbunny/vim-colorsamplerpack.git
