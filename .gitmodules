@@ -25,3 +25,6 @@
 [submodule "bundle/colorsamplerpack"]
     path = bundle/colorsamplerpack
     url = git://github.com/Slashbunny/vim-colorsamplerpack.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/thisivan/vim-bufexplorer.git
