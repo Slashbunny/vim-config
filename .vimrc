@@ -227,9 +227,9 @@ endif
 "nnoremap <silent> <C-C> :TlistToggle<CR>
 
 " PHP Documenter Plugin
-inoremap <C-P> <ESC>:call PhpDoc()<CR>i
-nnoremap <C-P> :call PhpDoc()<CR>
-vnoremap <C-P> :call PhpDoc()<CR>
+"inoremap <C-P> <ESC>:call PhpDoc()<CR>i
+"nnoremap <C-P> :call PhpDoc()<CR>
+"vnoremap <C-P> :call PhpDoc()<CR>
 
 " delimitMate Options
 let delimitMate_expand_cr = 1
@@ -248,3 +248,13 @@ let g:CommandTMaxFiles = 50000
 
 " Show column markers at 80 and 120 columns
 set colorcolumn=80,120
+
+" Ctrl-P Options
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 2
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.exe$\|\.so$\|\.dll$',
+  \ }
+
