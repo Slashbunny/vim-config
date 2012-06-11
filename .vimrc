@@ -258,3 +258,4 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dll$',
   \ }
 
+let g:ctrlp_max_files = 50000
