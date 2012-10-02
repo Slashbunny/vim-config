@@ -37,3 +37,6 @@
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = git://github.com/beyondwords/vim-twig.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
