@@ -259,3 +259,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ctrlp_max_files = 50000
+
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
