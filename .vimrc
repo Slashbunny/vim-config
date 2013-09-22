@@ -262,3 +262,5 @@ let g:ctrlp_max_files = 50000
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
