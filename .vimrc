@@ -131,7 +131,7 @@ set guioptions=aegimrLtb
 if ( has( "win32" ) )
     "set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
     "set guifont=Droid_Sans_Mono_Slashed:h8:cANSI
-    set guifont=Source_Code_Pro_Bold:h10:cANSI
+    set guifont=Source_Code_Pro:h10:b:cANSI
 else
     "set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
     set guifont=Source\ Code\ Pro\ Bold\ 12
