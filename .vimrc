@@ -129,11 +129,9 @@ syntax on
 set guioptions=aegimrLtb
 
 if ( has( "win32" ) )
-    "set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
     "set guifont=Droid_Sans_Mono_Slashed:h8:cANSI
-    set guifont=Source_Code_Pro:h10:b:cANSI
+    set guifont=Source_Code_Pro_Semibold:h9:cANSI
 else
-    "set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
     set guifont=Source\ Code\ Pro\ Bold\ 12
 endif
 
@@ -256,7 +254,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|cache$\|vendor$',
   \ 'file': '\.exe$\|\.so$\|\.dll$',
   \ }
 
