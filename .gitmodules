@@ -18,7 +18,7 @@
     url = git://github.com/wincent/Command-T.git
 [submodule "bundle/snipmate"]
     path = bundle/snipmate
-    url = git://github.com/msanders/snipmate.vim.git
+    url = https://github.com/garbas/vim-snipmate.git
 [submodule "bundle/supertab"]
     path = bundle/supertab
     url = git://github.com/ervandew/supertab.git
@@ -26,23 +26,23 @@
     path = bundle/colorsamplerpack
     url = git://github.com/Slashbunny/vim-colorsamplerpack.git
 [submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = https://github.com/thisivan/vim-bufexplorer.git
+    path = bundle/bufexplorer
+    url = https://github.com/thisivan/vim-bufexplorer.git
 [submodule "bundle/puppet-syntax-vim"]
-	path = bundle/puppet-syntax-vim
-	url = https://github.com/puppetlabs/puppet-syntax-vim
+    path = bundle/puppet-syntax-vim
+    url = https://github.com/puppetlabs/puppet-syntax-vim
 [submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
-	url = git://github.com/kien/ctrlp.vim.git
+    path = bundle/ctrlp.vim
+    url = git://github.com/kien/ctrlp.vim.git
 [submodule "bundle/vim-twig"]
-	path = bundle/vim-twig
-	url = git://github.com/beyondwords/vim-twig.git
+    path = bundle/vim-twig
+    url = git://github.com/beyondwords/vim-twig.git
 [submodule "bundle/vim-coffee-script"]
-	path = bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
+    path = bundle/vim-coffee-script
+    url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
+    path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree
 [submodule "bundle/vim-ledger"]
-	path = bundle/vim-ledger
-	url = https://github.com/ledger/vim-ledger.git
+    path = bundle/vim-ledger
+    url = https://github.com/ledger/vim-ledger.git
