@@ -123,7 +123,7 @@ command! Phpcs execute RunPhpcs()<CR>:copen
 "let g:zenburn_high_Contrast = 1
 "colorscheme zenburn
 "colorscheme molokai
-colorscheme desert
+colorscheme desert256
 set t_Co=256
 syntax on
 set guioptions=aegimrLtb
