@@ -1,7 +1,6 @@
 " Load all bundles (~/.vim/bundles) using Pathogen
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 " Do not run in Vi compatibility mode
 set nocompatible
