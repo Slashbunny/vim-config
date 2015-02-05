@@ -27,7 +27,7 @@
     url = git://github.com/Slashbunny/vim-colorsamplerpack.git
 [submodule "bundle/bufexplorer"]
     path = bundle/bufexplorer
-    url = https://github.com/thisivan/vim-bufexplorer.git
+    url = https://github.com/jlanzarotta/bufexplorer
 [submodule "bundle/puppet-syntax-vim"]
     path = bundle/puppet-syntax-vim
     url = https://github.com/puppetlabs/puppet-syntax-vim
@@ -47,8 +47,8 @@
     path = bundle/vim-ledger
     url = https://github.com/ledger/vim-ledger.git
 [submodule "bundle/vim-addon-mw-utils"]
-	path = bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+    path = bundle/vim-addon-mw-utils
+    url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/tlib_vim"]
-	path = bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
+    path = bundle/tlib_vim
+    url = https://github.com/tomtom/tlib_vim.git
