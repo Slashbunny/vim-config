@@ -302,6 +302,7 @@ set guifont=Monospace\ 10
 
 " Main Colorscheme
 silent! colorscheme gruvbox
+set bg=dark
 
 " Status/Tabline Theme
 let g:airline_theme = 'gruvbox'
