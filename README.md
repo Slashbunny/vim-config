@@ -14,7 +14,8 @@ below instructions if `vim` is being used as follows:
 
 ### Linux
 
-Install using package manager: `fzf`, `curl`, `neovim`, `python-pynvim`
+Install using package manager: `fzf`, `cmake`, `curl`, `git`,
+`neovim`, `python-pynvim` (possibly `python3-dev` depending on distro)
 
 Clone repo:
 
@@ -34,13 +35,23 @@ cd ~/.config/nvim/plugged/youcompleteme/
 
 ### Windows
 
-Install scoop from https://scoop.sh/
+Run all commands in PowerShell. Install scoop from https://scoop.sh/
 
 Install dependencies using scoop:
 
 ```
-scoop install neovim fzf curl
+scoop install neovim fzf curl git python cmake
 ```
+
+Install python's `neovim` module using `pip`:
+
+```powershell
+pip install neovim
+```
+
+You will also need to manually install
+[Visual Studio Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15) for YCM. During setup, select "Visual C++
+ build tools" in the "Workloads" tab.
 
 Clone repo:
 
@@ -55,7 +66,7 @@ Compile YCM:
 
 ```powershell
 cd ~\AppData\Local\nvim\plugged\youcompleteme\
-./install.py --clangd-completer
+python install.py --clangd-completer --msvc 15
 ```
 
 ## Maintenance
@@ -69,4 +80,9 @@ Run `:PlugUpdate`.
 Run `:PlugInstall`. The installation process only runs when `vim-plug` is
 downloaded and installed the first time. If more plugins are added to the
 configuration, you must run `:PlugInstall` to install them.
+
+### Windows-Specific
+
+Run `scoop update` regularly to pull the latest versions
+of packages previously installed.
 
