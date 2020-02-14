@@ -273,6 +273,9 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
+" In Markdown, use ,\ in visual mode to align Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
 
 " *****************************************************************************
 " Windows-specific
