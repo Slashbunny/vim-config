@@ -210,6 +210,11 @@ let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
 
+" Ledger
+let g:ledger_align_at = 51
+let g:ledger_commodity_sep = "$"
+let g:ledger_extra_options = '--pedantic --explicit --check-payees'
+
 
 " *****************************************************************************
 " Auto Commands
@@ -279,7 +284,10 @@ nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
 " In Markdown, use ,\ in visual mode to align Markdown tables
-au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+autocmd FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" Ledger
+autocmd FileType ledger noremap <silent><buffer> <Space> :call ledger#transaction_state_toggle(line('.'), ' *?!')<CR>
 
 
 " *****************************************************************************
@@ -289,6 +297,7 @@ if has("win32")
     source $VIMRUNTIME/mswin.vim
     behave mswin
 endif
+
 
 " *****************************************************************************
 " Visual Colors/Themes
