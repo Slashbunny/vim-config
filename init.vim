@@ -158,7 +158,10 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-let g:UltiSnipsEditSplit='vertical'
+
+" YCM (youcompleteme) Do not use tab, since it conflicts with UltiSnips
+let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
 
 " gVim Theme Compatibility
 let g:CSApprox_loaded = 1
@@ -206,6 +209,7 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
+
 
 " *****************************************************************************
 " Auto Commands
