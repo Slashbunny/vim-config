@@ -83,6 +83,6 @@ configuration, you must run `:PlugInstall` to install them.
 
 ### Windows-Specific
 
-Run `scoop update` regularly to pull the latest versions
+Run `scoop update *` regularly to pull the latest versions
 of packages previously installed.
 
