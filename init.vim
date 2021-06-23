@@ -247,6 +247,9 @@ autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype xml  setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
+" Force .pp files to be interpreted as puppet and wipe out the pascal autocmds
+autocmd! filetypedetect BufNewFile,BufRead *.pp setfiletype puppet
+
 
 " *****************************************************************************
 " Mappings
