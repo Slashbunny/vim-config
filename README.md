@@ -40,16 +40,19 @@ Run all commands in PowerShell. Install scoop from https://scoop.sh/
 Install dependencies using scoop:
 
 ```
-scoop install neovim fzf curl git python cmake
+scoop install neovim fzf curl git python python27 nodejs ruby cmake
 ```
 
-Install python's `neovim` module using `pip`:
+Install `neovim` modules for each supported language:
 
 ```powershell
-pip install neovim
+pip2 install neovim
+pip3 install neovim
+npm install -g neovim
+gem install neovim
 ```
 
-You will also need to manually install
+You will need to manually install
 [Visual Studio Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15) for YCM. During setup, select "Visual C++
  build tools" in the "Workloads" tab.
 
@@ -66,7 +69,7 @@ Compile YCM:
 
 ```powershell
 cd ~\AppData\Local\nvim\plugged\youcompleteme\
-python install.py --clangd-completer --msvc 15
+python3 install.py --msvc 15
 ```
 
 ## Maintenance
