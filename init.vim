@@ -54,7 +54,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'valloric/youcompleteme'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 Plug 'yggdroot/indentline'
 
@@ -160,9 +160,10 @@ let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
-" YCM (youcompleteme) Do not use tab, since it conflicts with UltiSnips
-let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
-let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
+" coc.vim
+let g:loaded_ruby_provider = 0
+let g:loaded_perl_provider = 0
+let g:coc_global_extensions = ['coc-css', 'coc-docker', 'coc-go', 'coc-html', 'coc-jedi', 'coc-phpls', 'coc-yaml', 'coc-json', 'coc-git']
 
 " gVim Theme Compatibility
 let g:CSApprox_loaded = 1

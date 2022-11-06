@@ -14,8 +14,8 @@ below instructions if `vim` is being used as follows:
 
 ### Linux
 
-Install using package manager: `fzf`, `cmake`, `curl`, `git`,
-`neovim`, `python-pynvim` (possibly `python3-dev` depending on distro)
+Install using package manager: `cmake`, `curl`, `fzf`, `git`, `neovim`,
+`nodejs`, `python`, `python2`, `python-pynvim`.
 
 Clone repo:
 
@@ -24,14 +24,13 @@ cd ~/.config/
 git clone git@github.com:Slashbunny/vim-config.git nvim
 ````
 
-Start neovim to install plugins.
-
-Compile YCM:
+Install `neovim` modules:
 
 ```bash
-cd ~/.config/nvim/plugged/youcompleteme/
-./install.py --clangd-completer
+npm install -g neovim
 ```
+
+Start neovim to install plugins.
 
 ### Windows
 
@@ -40,21 +39,16 @@ Run all commands in PowerShell. Install scoop from https://scoop.sh/
 Install dependencies using scoop:
 
 ```
-scoop install neovim fzf curl git python python27 nodejs ruby cmake
+scoop install neovim fzf curl git python python27 nodejs cmake
 ```
 
 Install `neovim` modules for each supported language:
 
 ```powershell
-pip2 install neovim
-pip3 install neovim
+python3 -m pip install neovim
+python2 -m pip install neovim
 npm install -g neovim
-gem install neovim
 ```
-
-You will need to manually install
-[Visual Studio Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15) for YCM. During setup, select "Visual C++
- build tools" in the "Workloads" tab.
 
 Clone repo:
 
@@ -65,14 +59,11 @@ git clone git@github.com:Slashbunny/vim-config.git nvim
 
 Start neovim to install plugins.
 
-Compile YCM:
-
-```powershell
-cd ~\AppData\Local\nvim\plugged\youcompleteme\
-python3 install.py --msvc 15
-```
-
 ## Maintenance
+
+### Check Setup
+
+Run `:checkhealth`.
 
 ### Updating Plugins
 
