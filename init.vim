@@ -152,6 +152,10 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 " Plugin Configuration
 " *****************************************************************************
 
+" Disable Neovim Providers not used
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
+
 " UltiSnips
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
