@@ -309,7 +309,6 @@ set t_Co=256
 
 " GUI Settings
 set guioptions=aegimrLtb
-set guifont=Monospace\ 10
 
 " Main Colorscheme
 silent! colorscheme gruvbox
