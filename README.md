@@ -39,7 +39,7 @@ Run all commands in PowerShell. Install scoop from https://scoop.sh/
 Install dependencies using scoop:
 
 ```
-scoop install neovim fzf curl git python nodejs cmake
+scoop install neovim fzf curl git python pyenv nodejs cmake
 ```
 
 Install `neovim` modules for each supported language:
