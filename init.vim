@@ -299,7 +299,6 @@ autocmd FileType ledger noremap <silent><buffer> <Space> :call ledger#transactio
 " *****************************************************************************
 if has("win32")
     source $VIMRUNTIME/mswin.vim
-    behave mswin
 endif
 
 
