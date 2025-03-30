@@ -258,9 +258,6 @@ autocmd! filetypedetect BufNewFile,BufRead *.pp setfiletype puppet
 " Leader
 let mapleader=','
 
-" Keybind to toggle paste mode
-set pastetoggle=<F11>
-
 " FZF
 nnoremap <C-p> :Files<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -308,9 +305,6 @@ endif
 
 " Vim-Only Terminal Color Setting
 set t_Co=256
-
-" GUI Settings
-set guioptions=aegimrLtb
 
 " Main Colorscheme
 silent! colorscheme gruvbox
