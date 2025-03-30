@@ -1,10 +1,8 @@
-" vim & neovim configuration
+" neovim configuration
 "
 " Install:
 "
-"     neovim: Clone to ~/.config/nvim/
-"     vim   : Clone to ~/vim/
-"             ln -s ~/vim/init.vim ~/.vimrc
+"   Clone to ~/.config/nvim/
 "
 " Prerequisites:
 "
@@ -20,11 +18,7 @@
 " Download vim-plug if it doesn't exist
 " *****************************************************************************
 
-if has('nvim')
-    let vimplug_path=expand(stdpath('config') . '/autoload/plug.vim')
-else
-    let vimplug_path=expand('~/.vim/autoload/plug.vim')
-endif
+let vimplug_path=expand(stdpath('config') . '/autoload/plug.vim')
 
 if !filereadable(vimplug_path)
     echo "Installing vim-plug..."

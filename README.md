@@ -1,16 +1,8 @@
-# Personal vim/neovim configs
+# Personal neovim configs
 
 ## Installation
 
-The following instructions are for `neovim`. Using `vim` (or `gvim` on Windows)
-will work as well. However, you will need to change the paths referenced in the
-below instructions if `vim` is being used as follows:
-
-|         | neovim                  | vim           |
-| ----    | ----                    | ----          |
-| Linux   | `~/.config/nvim/`       | `~/.vim/`     |
-| Windows | `~\AppData\Local\nvim\` | `~\vimfiles\` |
-
+The following instructions are for `neovim` only (`vim` support has been dropped).
 
 ### Linux
 
