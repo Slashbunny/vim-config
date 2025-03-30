@@ -295,7 +295,7 @@ autocmd FileType ledger noremap <silent><buffer> <Space> :call ledger#transactio
 " Windows-specific
 " *****************************************************************************
 if has("win32")
-    source $VIMRUNTIME/mswin.vim
+    source $VIMRUNTIME/scripts/mswin.vim
 endif
 
 
