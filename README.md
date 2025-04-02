@@ -7,7 +7,7 @@ The following instructions are for `neovim` only (`vim` support has been dropped
 ### Linux
 
 Install using package manager: `cmake`, `curl`, `fzf`, `git`, `neovim`,
-`nodejs`, `python`, `python-pynvim`.
+`nodejs`, `npm`, `python`, `python-pip` `python-pynvim`.
 
 Clone repo:
 
