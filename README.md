@@ -6,8 +6,7 @@ The following instructions are for `neovim` only (`vim` support has been dropped
 
 ### Linux
 
-Install using package manager: `cmake`, `curl`, `fzf`, `git`, `neovim`,
-`nodejs`, `npm`, `python`, `python-pip` `python-pynvim`.
+Install using package manager: `cmake`, `curl`, `fzf`, `git`, `neovim`, `python`, `python-pip` `python-pynvim`.
 
 Clone repo:
 
@@ -16,11 +15,6 @@ cd ~/.config/
 git clone git@github.com:Slashbunny/vim-config.git nvim
 ````
 
-Install `neovim` modules:
-
-```bash
-npm install -g neovim
-```
 
 Start neovim to install plugins.
 
@@ -31,14 +25,13 @@ Run all commands in PowerShell. Install scoop from https://scoop.sh/
 Install dependencies using scoop:
 
 ```
-scoop install neovim fzf curl git python pyenv nodejs cmake
+scoop install neovim fzf curl git python pyenv cmake
 ```
 
 Install `neovim` modules for each supported language:
 
 ```powershell
 pip3 install --upgrade pynvim
-npm install -g neovim
 ```
 
 Clone repo:
@@ -69,6 +62,6 @@ configuration, you must run `:PlugInstall` to install them.
 ### Windows-Specific
 
 Run `scoop update *` regularly to pull the latest versions
-of packages previously installed. Run the `pip3` and `npm` commands to update
+of packages previously installed. Run the `pip3` command to update
 the language modules.
 

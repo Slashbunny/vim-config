@@ -149,6 +149,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 " Disable Neovim Providers not used
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
 
 " Python3 should always just be "python" autodetection on Windows is broken
 let g:python3_host_prog = 'python'
